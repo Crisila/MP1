@@ -10,23 +10,36 @@
 </head>
 <body>
     <h1>Hangman</h1>
-    <h2>Enter the right letter for each word space to save the stickman! First person to save 3 stickman will win. </h2>
+    <h2>Enter the right letter for each word space to save the stickman! </h2>
 
     <div class="player-container">
-    <!-- player 1 input -->
-    <!-- player 2 input -->
+
+    
+    <!-- game categoriies: will be radomized for every page refresh-->
+        <div id="categ-button"></div>
+
+    <!-- player input -->
         <div id="player-buttons"></div>
-    </div>
 
     <!-- letters options here -->
     <div class="letters">
         <div id="letter-buttons"></div>
     </div>
 
+    </div>
+
+
+
 
     <!-- hangman word game -->
     <div class="stickman">
 
+    </div>
+
+    <!-- player lives -->
+
+    <div class="player-lives">
+        <h3>Yo</h3>
     </div>
 
 
@@ -36,10 +49,9 @@
 
 
 
-    <!-- score counter: first to win 4 points will win -->
+    <!-- player winner or loser -->
     <div class="result">
-        <div id="p1-points"><h3>Player 1:</h3></div>
-        <div id="p2-points"><h3>Player 2:</h3></div>
+        <div id="player-result"></div>
     </div>
 </body>
 </html>

@@ -1,6 +1,47 @@
+body {
+    background-color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    color: black;
+}
+
 .stickman {
+    background-color: #769353;
     width: 800px;
     height: 500px;
     border: 1px solid black;
     margin: auto;
+}
+
+
+
+.stickman-figure {
+    color: black;
+}
+
+.player-result {
+    display: flex;
+    position: absolute;
+
+}
+
+.wrong-letters-cont {
+    text-align: center;
+    /* color: black;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 500px;
+    right: 700px;
+     */
+}
+
+.wrong-letters p {
+    font-size: 20px;
+}
+
+.head.body.right-arm.left-arm.right-arm.left-leg.right-leg {
+    color: white;
 }

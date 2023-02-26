@@ -1,54 +1,99 @@
 body {
-    background-color: white;
+    background-color: black;
 }
 
-h1, h2 {
+h1 {
+    font-size: 80px;
+    color: #fff;
     text-align: center;
-    color: black;
-}
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #red, 0 0 40px #red, 0 0 50px #red, 0 0 60px #red, 0 0 70px #red, 0 0 80px #red;
+    }
+  }
+
+
+h2 {
+    text-align: center;
+    color: white;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 18.5714px;
+  }
+
 
 .stickman {
-    background-color: white;
+    background-color: black;
     width: 800px;
     height: 500px;
-    border: 1px solid black;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
     margin: auto;
 }
 
 
 
 .stickman-figure {
-    color: black;
+    color: #b84d69;
+
 }
 
-.player-result {
-    display: flex;
-    position: absolute;
-
+.result {
+    text-align: center;
+    color: white;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 18.5714px;
 }
 
 .wrong-letters-cont {
     text-align: center;
-    /* color: black;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 500px;
-    right: 700px;
-     */
+    color: white;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 18.5714px;
 }
 
 .wrong-letters p {
-    font-size: 20px;
+    color: white;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 18.5714px;
     
 }
 
 .player-ans {
-    text-align: center;
     letter-spacing: 10px;
+    position: relative;
+    top: 200px;
+    text-align: center;
+    color: white;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 18.5714px;
 }
 
-.head.body.right-arm.left-arm.right-arm.left-leg.right-leg {
+
+.head .body .right-arm .left-arm .right-arm .left-leg .right-leg {
     color: white;
 }
 

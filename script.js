@@ -28,11 +28,12 @@ const words = [
 
 
 //choose word randomly
-const randWord = Math.floor(Math.random() * words.length);
-const chosenWord = words[randWord]; 
-const correctAns = [];
-const incorrectAns = [];
-const lines = [];
+let randWord = Math.floor(Math.random() * words.length);
+let chosenWord = words[randWord];
+let correctAns = [];
+let incorrectAns = [];
+let lines = [];
+
 
 
 
@@ -42,22 +43,26 @@ let playerResult = document.getElementById("player-result")
 let wrongLetters = document.getElementsByClassName('wrong-letters')
 
 
+// Debug
+console.log(chosenWord);
 
-// display number of lines per letter of the word
 //issue: spaces are being counted
 //issue: double letters
 //issue: capital letters 
+//need code to show hangman each wrong letter chosen
 
-console.log(chosenWord);
 
+
+// display number of lines per letter of the word
 let genLines = () => {
     for (let i = 0; i < chosenWord.length; i++) {
         lines.push('_'); 
     }
     return lines
 }
-
+// // debug
 // console.log(genLines());
+
 
 //get user's guess
 document.addEventListener('keypress', (event) => {
@@ -69,8 +74,10 @@ document.addEventListener('keypress', (event) => {
         correctAns.push(key);
         // replace lines to letters
         lines[chosenWord.indexOf(key)] = key;
+
         playerAns[0].innerHTML = lines.join(' ');
         playerResult.innerHTML = correctAns;
+
         // check if word matches 
         // console.log(lines)
         if (lines.join('') == chosenWord) {

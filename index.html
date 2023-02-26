@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    
     <link rel="stylesheet" type="text/CSS" href="styles.css">
     <title>Milestone Project 1</title>
 </head>
@@ -42,37 +42,42 @@
         
         <!-- stage + hanging device -->
         <line x1="100" y1="20" x2="20" y2="20" />
-        <line x1="" y1="" x2="" y2="" />
-        <line x1="" y1="" x2="" y2="" />
+        <line x1="0" y1="0" x2="0" y2="0" />
+        <line x1="0" y1="0" x2="0" y2="0" />
 
         <!-- head -->
         <circle cx="40" cy="40" r="20" class="head" />
 
         <!-- body -->
-        <line x1="" y1="" x2="" y2="" class="body"/>
+        <line x1="0" y1="0" x2="0" y2="0" class="body"/>
 
         <!-- arms -->
-        <line x1="" y1="" x2="" y2="" class="right-arm"/>
-        <line x1="" y1="" x2="" y2="" class="left-arm"/>
+        <line x1="0" y1="0" x2="0" y2="0" class="right-arm"/>
+        <line x1="0" y1="0" x2="0" y2="0" class="left-arm"/>
 
         <!-- legts -->
-        <line x1="" y1="" x2="" y2="" class="right-leg"/>
-        <line x1="" y1="" x2="" y2="" class="left-leg"/>
+        <line x1="0" y1="0" x2="0" y2="0" class="right-leg"/>
+        <line x1="0" y1="0" x2="0" y2="0" class="left-leg"/>
 
         </svg>
+
+
+            <!-- current player's input where the word spaces will go -->
+            <div class="player-ans">    </div>
+
+
      </div>
 
     <!-- for wrong letters -->
     <div class="wrong-letters-cont">
         <div class="wrong-letters"><p>Wrong letters: </p></div>
     </div>
-    
-    <!-- current player's input where the word spaces will go -->
-    <div class="player-ans"></div>
 
 
 
-    <!-- player winner or loser -->
+
+
+    <!-- amount of correct words -->
     <div class="result">
         <div id="player-result"></div>
     </div>
@@ -87,6 +92,6 @@
 
 </div>
 
-
+<script src="script.js"></script>
 </body>
 </html>

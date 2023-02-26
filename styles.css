@@ -8,7 +8,7 @@ h1, h2 {
 }
 
 .stickman {
-    background-color: #769353;
+    background-color: white;
     width: 800px;
     height: 500px;
     border: 1px solid black;
@@ -40,8 +40,18 @@ h1, h2 {
 
 .wrong-letters p {
     font-size: 20px;
+    
+}
+
+.player-ans {
+    text-align: center;
+    letter-spacing: 10px;
 }
 
 .head.body.right-arm.left-arm.right-arm.left-leg.right-leg {
     color: white;
+}
+
+.alert-pop-up {
+    text-align: center;
 }

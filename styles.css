@@ -31,12 +31,13 @@ h2 {
     line-height: 18.5714px;
   }
 
+ 
 
 .stickman {
     background-color: black;
     width: 800px;
-    height: 500px;
-    outline: none;
+    height: 600px;  
+    outline:#fff; 
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
     margin: auto;
@@ -45,9 +46,18 @@ h2 {
 
 
 .stickman-figure {
-    color: #b84d69;
+    width: 750px;
+    height: 550px;
+    color: white;
+    margin: auto;
 
 }
+.rod-base, .rod, .hanger, .head, .body, .right-arm, .left-arm, .left-leg, .right-leg {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+ 
+ }
 
 .result {
     text-align: center;
@@ -93,9 +103,7 @@ h2 {
 }
 
 
-.head .body .right-arm .left-arm .right-arm .left-leg .right-leg {
-    color: white;
-}
+
 
 .alert-pop-up {
     text-align: center;

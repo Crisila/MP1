@@ -52,7 +52,8 @@ h2 {
     margin: auto;
 
 }
-.rod-base, .rod, .hanger, .head, .body, .right-arm, .left-arm, .left-leg, .right-leg {
+/* .rod-base, .rod, .hanger, .head, .body, .right-arm, .left-arm, .left-leg, .right-leg { */
+.figure {
     stroke: white;
     stroke-width: 2;
     fill: none;
@@ -92,7 +93,7 @@ h2 {
 .player-ans {
     letter-spacing: 10px;
     position: relative;
-    top: 200px;
+    top: 5px;
     text-align: center;
     color: white;
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-size: 20px; 

@@ -342,6 +342,7 @@ document.addEventListener('keypress', (event) => {
         IsGuessedWordComplete();
         stickmanParts();
     }
+    console.log('Correct Answer:', guessedWord); // Log correct answers
 });
 
 function displayLetters(userGuess) {
@@ -377,10 +378,24 @@ function stickmanParts() {
     }
 }
 
+function redirectToHome() {
+    window.location.href = 'index.html'; // Replace 'index.html' with your desired URL
+}
+
+// Call redirectToHome when the user loses or wins
 function showLives() {
     if (lives <= 0) {
         alert('Game Over');
-        // Reset or redirect
+        redirectToHome(); // Redirect the user when they lose
     }
 }
+
+// Alternatively, if the player wins
+function IsGuessedWordComplete() {
+    if (lines.join('') === guessedWord) {
+        alert('Congratulations! You saved the stickman!');
+        redirectToHome(); // Redirect the user when they win
+    }
+}
+
 

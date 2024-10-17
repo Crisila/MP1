@@ -1,28 +1,8 @@
 const words = [
-    "Platypus",
-    "Elephant",
-    "Flying Squirrel",
-    "Humpback Whale",
-    "Armadillo",
-    "Fennec Fox",
-    "Ethiopia",
-    "Guatemala",
-    "Madagascar",
-    "Solomon Island",
-    "Slovakia",
-    "Zimbabwe",
-    "head",
-    "hands",
-    "arms",
-    "elbow",
-    "knees",
-    "back",
-    "chair",
-    "table",
-    "desk",
-    "bed",
-    "coffee table",
-    "cabinet"
+    "Platypus", "Elephant", "Flying Squirrel", "Humpback Whale", "Armadillo",
+    "Fennec Fox", "Ethiopia", "Guatemala", "Madagascar", "Solomon Island",
+    "Slovakia", "Zimbabwe", "head", "hands", "arms", "elbow", "knees",
+    "back", "chair", "table", "desk", "bed", "coffee table", "cabinet"
 ];
 
 // Choose a random word and convert it to lowercase
@@ -37,24 +17,23 @@ let lines = Array.from(guessedWord).map(letter => (letter === ' ') ? ' ' : '_');
 document.getElementsByClassName("player-ans")[0].innerHTML = lines.join(' ');
 document.getElementById("player-lives").innerHTML = lives;
 
-document.getElementById("play-again").addEventListener("click", function () {
-    document.querySelector('.alert-pop-up').style.display = 'none'; 
-    location.reload(); 
+// Play again button
+document.getElementById("play-again").addEventListener("click", () => {
+    document.querySelector('.alert-pop-up').style.display = 'none';
+    location.reload();
 });
 
-
-
+// Key press event listener
 document.addEventListener('keypress', (event) => {
     const userGuess = event.key.toLowerCase();
+
     // Ensure the guess is a letter and not already guessed
     if (!correctAns.includes(userGuess) && !incorrectAns.includes(userGuess) && userGuess >= 'a' && userGuess <= 'z') {
         displayLetters(userGuess);
         showLives();
-        IsGuessedWordComplete();
-        stickmanParts();
+        checkGuessedWordComplete();
+        updateStickmanParts();
     }
-    // // Log the correct answer
-    // console.log('Correct Answer:', guessedWord);
 });
 
 function displayLetters(userGuess) {
@@ -62,11 +41,10 @@ function displayLetters(userGuess) {
         correctAns.push(userGuess);
         for (let i = 0; i < guessedWord.length; i++) {
             if (guessedWord[i] === userGuess) {
-                // Update correct letters
-                lines[i] = userGuess;
+                lines[i] = userGuess; // Update correct letters
             }
         }
-        document.getElementsByClassName("player-ans")[0].innerHTML = lines.join(' '); 
+        document.getElementsByClassName("player-ans")[0].innerHTML = lines.join(' ');
     } else {
         incorrectAns.push(userGuess);
         document.getElementsByClassName('wrong-letters')[0].innerHTML = incorrectAns.join(', ');
@@ -75,9 +53,7 @@ function displayLetters(userGuess) {
     }
 }
 
-function IsGuessedWordComplete() {
-    // Check if the guessed word matches the correct answer excluding spaces
-    // Remove spaces for comparison
+function checkGuessedWordComplete() {
     const currentGuess = lines.join('').replace(/ /g, '');
 
     if (currentGuess === guessedWord) {
@@ -86,11 +62,13 @@ function IsGuessedWordComplete() {
     }
 }
 
-function stickmanParts() {
+function updateStickmanParts() {
     const stickmanParts = document.getElementsByClassName('figure');
+
     for (let i = 0; i < stickmanParts.length; i++) {
         stickmanParts[i].style.display = i < incorrectAns.length ? 'block' : 'none';
     }
+
     if (incorrectAns.length === stickmanParts.length) {
         alert('You lost!');
         redirectToHome();
@@ -108,4 +86,3 @@ function showLives() {
         redirectToHome();
     }
 }
-

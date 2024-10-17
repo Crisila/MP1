@@ -50,8 +50,8 @@ Used to create the stickman figure and the game’s graphical elements, allowing
 The game runs in web browsers, utilizing JavaScript’s DOM manipulation capabilities to update the game interface in real-time.
 
 # Bugs/Unfinished Functionality
--[ ] Need to fix the alert pop-up
--[ ] Add multi-player capabilities like 1vs1 and more
--[ ] Ability for users to create an account and login
--[ ] I want to deploy 
--[ ] Fix some CSS issues
+- [ ] Need to fix the alert pop-up
+- [ ] Add multi-player capabilities like 1vs1 and more
+- [ ] Ability for users to create an account and login
+- [ ] I want to deploy 
+- [ ] Fix some CSS issues

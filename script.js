@@ -38,8 +38,8 @@ document.getElementsByClassName("player-ans")[0].innerHTML = lines.join(' ');
 document.getElementById("player-lives").innerHTML = lives;
 
 document.getElementById("play-again").addEventListener("click", function () {
-    document.querySelector('.alert-pop-up').style.display = 'none'; // Hide the alert
-    location.reload(); // Reload the page to reset the game
+    document.querySelector('.alert-pop-up').style.display = 'none'; 
+    location.reload(); 
 });
 
 
@@ -53,8 +53,8 @@ document.addEventListener('keypress', (event) => {
         IsGuessedWordComplete();
         stickmanParts();
     }
-    // Log the correct answer
-    console.log('Correct Answer:', guessedWord);
+    // // Log the correct answer
+    // console.log('Correct Answer:', guessedWord);
 });
 
 function displayLetters(userGuess) {
@@ -66,7 +66,7 @@ function displayLetters(userGuess) {
                 lines[i] = userGuess;
             }
         }
-        document.getElementsByClassName("player-ans")[0].innerHTML = lines.join(' '); // Display updated letters and spaces
+        document.getElementsByClassName("player-ans")[0].innerHTML = lines.join(' '); 
     } else {
         incorrectAns.push(userGuess);
         document.getElementsByClassName('wrong-letters')[0].innerHTML = incorrectAns.join(', ');

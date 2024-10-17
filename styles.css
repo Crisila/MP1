@@ -109,3 +109,19 @@ h2 {
 .alert-pop-up {
     text-align: center;
 }
+
+
+button {
+  background-color: #e60073;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff0088;
+}

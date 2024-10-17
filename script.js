@@ -116,10 +116,6 @@ let genLines = () => {
     });
 
 
-
-
-
-
 function displayletters() {
     //display correct letters
 
@@ -131,9 +127,13 @@ function displayletters() {
         playerAns[0].innerHTML = lines.join(' ');
         playerLives.innerHTML = lives;
 
-        
+        const replaceguess = guessedWord.innerText.replace(/\n/g, ' ');
+
+        if (replaceguess === guessedWord){
+            alert('You win!')
+        }
     }   
-    const replaceguess = guessedWord.innerText.replace(/\n/g, ' ');
+    
     
 }
 
@@ -146,7 +146,7 @@ playerAns[0].innerHTML = genLines().join('');
 function IsGuessedWordComplete() {
         // check if word matches 
     // console.log(lines)
-    if (lines.join('') === guessedWord) {
+    if (correctAns === guessedWord) {
         alert('Congratulations! You saved the stickman!')
     }
 // display incorrect letters used
@@ -185,7 +185,7 @@ function stickmanparts() {
 //show lives
 
 function showLives() {
-    if (lives <1) {
+    if (lives < 1) {
         playerLives.innerHTML = "Game Over";
 
     }

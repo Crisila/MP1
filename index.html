@@ -6,47 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/CSS" href="styles.css">
-    <title>Milestone Project 1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Milestone Project 1 - Hangman</title>
 </head>
 
 <body>
-    <h1>Hangman</h1>
+    <header>
+        <h1>Hangman</h1>
+        <h2>Enter the right letter for each word space to save the stickman!</h2>
+    </header>
 
-    <!-- make this into a pop-up -->
-    <h2>Enter the right letter for each word space to save the stickman!</h2>
-
-    <!-- <div class="game-container"> -->
-
-    <br>
-    <!-- game categoriies: will be radomized for every page refresh-->
-    <!-- <div id="categ-button"> -->
-    <!-- add button for random category options -->
-    <!-- <script>
-                document.write(`The chosen category is <strong>${random}</strong>`)
-            </script>
-            
-        </div> -->
-
-    <!-- <br> -->
-
-
-    <!-- letters options here -->
-    <!-- <div class="letters">
-        <div id="letter-buttons"> -->
-    <!-- add A,B,C buttons -->
-    <!-- </div>
-    </div> -->
-
-    <!-- hangman word game -->
     <div class="stickman">
-        <svg class="stickman-figure">
-
+        <svg class="stickman-figure" aria-labelledby="stickman-title" role="img">
+            <title id="stickman-title">Stickman Figure</title>
             <!-- stage + hanging device -->
-            <line x1="150" y1="430" x2="290" y2="430" class="figure"/>
-            <line x1="220" y1="40" x2="220" y2="430" class="figure"/>
-            <line x1="416" y1="40" x2="200" y2="40" class="figure"/>
-            <line x1="416" y1="100" x2="416" y2="40" class="figure"/>
+            <line x1="150" y1="430" x2="290" y2="430" class="figure" />
+            <line x1="220" y1="40" x2="220" y2="430" class="figure" />
+            <line x1="416" y1="40" x2="200" y2="40" class="figure" />
+            <line x1="416" y1="100" x2="416" y2="40" class="figure" />
 
             <!-- head -->
             <circle cx="415" cy="140" r="38" class="figure" />
@@ -58,45 +35,31 @@
             <line x1="350" y1="250" x2="416" y2="200" class="figure" />
             <line x1="416" y1="200" x2="484" y2="250" class="figure" />
 
-            <!-- legts -->
+            <!-- legs -->
             <line x1="350" y1="350" x2="416" y2="300" class="figure" />
             <line x1="416" y1="300" x2="484" y2="350" class="figure" />
-
         </svg>
-    <!-- current player's input where the word spaces will go -->
-    <div class="player-ans"> </div>
+
+        <!-- Current player's input where the word spaces will go -->
+        <div class="player-ans"></div>
     </div>
 
-
-
-    <!-- </div> -->
-
-    <!-- for wrong letters -->
+    <!-- For wrong letters -->
     <div class="wrong-letters-cont">
-        <div>
-            <p>Wrong letters: <strong class="wrong-letters"></strong> </p>
-        </div>
+        <p>Wrong letters: <strong class="wrong-letters"></strong></p>
     </div>
 
-
-
-
-
-    <!-- amount of correct words -->
+    <!-- Amount of correct words -->
     <div class="result">
-        <div>
-            <p>Remaining lives: <strong id="player-lives"></strong></p>
-        </div>
+        <p>Remaining lives: <strong id="player-lives"></strong></p>
     </div>
 
+    <!-- Alert pop-up -->
     <div class="alert-pop-up">
         <div class="pop-up">
             <h2 id="final-alert">By: Crisila</h2>
             <button id="play-again">Oops! Play again.</button>
         </div>
-    </div>
-
-
     </div>
 
     <script src="script.js"></script>

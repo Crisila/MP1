@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+
+
+button {
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+  border-radius: $border-radius-base;
+  padding: $padding-base 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  @include button-style($primary-color, $hover-color);
+
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+
+  &:focus {
+    outline: 2px solid $hover-color;
+  }
+
+
+  &:disabled {
+    background-color: lighten($primary-color, 20%);
+    cursor: not-allowed;
+  }
+}

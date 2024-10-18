@@ -1,19 +1,11 @@
 @import 'variables';
 @import 'mixins';
+@import 'stickman';
+@import 'buttons';
+@import 'base';
 
 
-body {
-  background-color: $black-bg;
-}
 
-h1 {
-     font-size: 80px;
-     color: $white;
-     text-align: center;
-     -webkit-animation: glow 1s ease-in-out infinite alternate;
-     -moz-animation: glow 1s ease-in-out infinite alternate;
-     animation: glow 1s ease-in-out infinite alternate;
-}
 
 @-webkit-keyframes glow {
   from {
@@ -25,66 +17,7 @@ h1 {
 }
 
 
-h2 {
-     text-align: center;
-     color: $white;
-     @include font-settings($font-size-base, 400);
-}
 
-.stickman {
-     background-color: $black-bg;
-     width: 800px;
-     height: 600px;
-     outline: $white; 
-     border-color: #9ecaed;
-     box-shadow: 0 0 10px #9ecaed;
-     margin: auto;
-}
-
-.stickman-figure {
-     width: 750px;
-     height: 550px;
-     color: $white;
-     margin: auto;
-}
-
-.figure {
-     stroke: $white;
-     stroke-width: 2;
-     fill: none;
-}
-
-.result, .wrong-letter-cont, .player-ans {
-     text-align: center;
-     color: $white;
-     letter-spacing: 10px;
-     @include font-settings($font-size-base, 400);
-}
-
-.wrong-letters p {
-     color: $white;
-     @include font-settings($font-size-base, 400);
-}
-
-.player-ans {
-     position: relative;
-     top: 5px;
-}
-
-button {
-  background-color: #e60073;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: $hover-color;
-  }
-}
 
 .alert-pop-up {
      text-align: center;

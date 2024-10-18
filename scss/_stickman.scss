@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'mixins';
+
+
+.stickman {
+  background-color: $black-bg;
+  width: 800px;
+  height: 600px;
+  outline: $white;
+  border-color: $border-color;
+  @include box-shadow($box-shadow-color, 10px);
+  margin: auto;
+
+  // Example usage of validate-padding mixin
+  @include validate-padding($padding-base);
+
+  .stickman-figure {
+    width: 750px;
+    height: 550px;
+    color: $white;
+    margin: auto;
+  }
+
+  .figure {
+    stroke: $white;
+    stroke-width: 2;
+    fill: none;
+
+    &:hover {
+      stroke-width: 3;
+    }
+  }
+}
+
+
+.result, .wrong-letters-cont, .player-ans {
+     text-align: center;
+     color: $white;
+     letter-spacing: 5px;
+     @include font-settings($font-size-base, 400);
+}
+
+.wrong-letters {
+  color: $white;
+  @include font-settings($font-size-base, 400);
+
+  p {
+    color: $white;
+    @include font-settings($font-size-base, 400);
+  }
+}
+
+
+.player-ans {
+     letter-spacing: 10px;
+     position: relative;
+     top: 5px;
+     text-align: center;
+     color: $white;
+     letter-spacing: 10px;
+     @include font-settings($font-size-base, 400);
+}

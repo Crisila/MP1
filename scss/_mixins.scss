@@ -1,7 +1,42 @@
-// Mixin for fonts
+// Mixin for setting reusable font settings
 @mixin font-settings($size, $weight, $line-height: $line-height-base) {
-  font-family: $font-family;
+  font-family: $font-family-main;
   font-size: $size;
   font-weight: $weight;
   line-height: $line-height;
+}
+
+@mixin button-style($background-color, $hover-color) {
+  background-color: $background-color;
+  color: $white;
+  border: none;
+  border-radius: $border-radius-base;
+  padding: $padding-base 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+
+@mixin box-shadow($color, $blur: 10px) {
+  box-shadow: 0 0 $blur $color;
+}
+
+
+@mixin responsive-text($min-size, $max-size) {
+  font-size: $min-size;
+
+  @media (min-width: 768px) {
+    font-size: $max-size;
+  }
+}
+
+// got help from chatGPT for this.
+@mixin validate-padding($padding) {
+  @if ($padding < 0) {
+    @error "Padding cannot be negative!";
+  }
 }

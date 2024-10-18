@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  background-color: $black-bg;
+}
+
+h1 {
+     font-size: $font-size-large;
+     color: $white;
+     text-align: center;
+     -webkit-animation: glow 1s ease-in-out infinite alternate;
+     -moz-animation: glow 1s ease-in-out infinite alternate;
+     animation: glow 1s ease-in-out infinite alternate;
+}
+
+h2 {
+     text-align: center;
+     color: $white;
+     @include font-settings($font-size-base, 400);
+     @include responsive-text(16px, 24px);
+}

@@ -1,3 +1,31 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18.5714px;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
 .stickman {
   background-color: black;
   width: 800px;
@@ -89,34 +117,6 @@ button:focus {
 button:disabled {
   background-color: #ff4da6;
   cursor: not-allowed;
-}
-
-body {
-  background-color: black;
-}
-
-h1 {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-h2 {
-  text-align: center;
-  color: #fff;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 18.5714px;
-  font-size: 16px;
-}
-@media (min-width: 768px) {
-  h2 {
-    font-size: 24px;
-  }
 }
 
 @-webkit-keyframes glow {
